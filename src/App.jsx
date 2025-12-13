@@ -32,9 +32,9 @@ const App = () => {
     try {
       const response = await axios.post(API_ENDPOINTS.LOGIN, { email, password });
       if (response.data.success) {
-        setUser(response.data.role);
+        setUser(response.data.data.role);
         setLoggedInUserData(response.data.data);
-        localStorage.setItem('loggedInUser', JSON.stringify({ role: response.data.role, data: response.data.data }));
+        localStorage.setItem('loggedInUser', JSON.stringify({ role: response.data.data.role, data: response.data.data }));
         toast.success("Login successful!");
       }
     } catch (error) {
