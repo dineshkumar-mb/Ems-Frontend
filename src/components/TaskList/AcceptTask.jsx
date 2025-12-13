@@ -32,18 +32,18 @@ const AcceptTask = ({ data, userId }) => {
     }
 
     return (
-        <div className='flex-shrink-0 h-full w-[300px] p-5 bg-red-400 rounded-xl'>
-            <div className='flex justify-between items-center'>
-                <h3 className='bg-red-600 text-sm px-3 py-1 rounded'>{data.category}</h3>
-                <h4 className='text-sm'>{data.taskDate}</h4>
+        <div className='flex-shrink-0 h-full w-[300px] p-5 bg-[#1c1c1c] rounded-xl shadow-lg shadow-yellow-500/10 border border-yellow-500/20'>
+            <div className='flex justify-between items-center mb-4'>
+                <h3 className='bg-yellow-600 text-[10px] uppercase font-bold px-3 py-1 rounded text-white'>{data.category}</h3>
+                <h4 className='text-xs text-gray-400'>{data.taskDate}</h4>
             </div>
-            <h2 className='mt-5 text-2xl font-semibold'>{data.taskTitle}</h2>
-            <p className='text-sm mt-2'>
+            <h2 className='text-xl font-bold text-white mb-2 leading-tight'>{data.taskTitle}</h2>
+            <p className='text-sm text-gray-400 h-[45%] overflow-hidden'>
                 {data.taskDescription}
             </p>
-            <div className='flex justify-between mt-6 '>
-                <button onClick={() => updateStatus('completed')} className='bg-green-500 rounded font-medium py-1 px-2 text-xs'>Mark as Completed</button>
-                <button onClick={() => updateStatus('failed')} className='bg-red-500 rounded font-medium py-1 px-2 text-xs'>Mark as Failed</button>
+            <div className='flex justify-between mt-6 gap-2'>
+                <button onClick={() => updateStatus('completed')} className='flex-1 bg-green-600 hover:bg-green-700 text-white rounded-lg font-medium py-2 px-3 text-xs transition-colors'>Mark Completed</button>
+                <button onClick={() => updateStatus('failed')} className='flex-1 bg-red-600 hover:bg-red-700 text-white rounded-lg font-medium py-2 px-3 text-xs transition-colors'>Mark Failed</button>
             </div>
         </div>
     )

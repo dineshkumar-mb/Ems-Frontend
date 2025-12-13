@@ -61,17 +61,17 @@ const NewTask = ({ data, userId }) => {
     }
 
     return (
-        <div className='flex-shrink-0 h-full w-[300px] p-5 bg-green-400 rounded-xl'>
-            <div className='flex justify-between items-center'>
-                <h3 className='bg-red-600 text-sm px-3 py-1 rounded'>{data.category}</h3>
-                <h4 className='text-sm'>{data.taskDate}</h4>
+        <div className='flex-shrink-0 h-full w-[300px] p-5 bg-[#1c1c1c] rounded-xl shadow-lg shadow-blue-500/10 border border-blue-500/20'>
+            <div className='flex justify-between items-center mb-4'>
+                <h3 className='bg-blue-600 text-[10px] uppercase font-bold px-3 py-1 rounded text-white'>{data.category}</h3>
+                <h4 className='text-xs text-gray-400'>{data.taskDate}</h4>
             </div>
-            <h2 className='mt-5 text-2xl font-semibold'>{data.taskTitle}</h2>
-            <p className='text-sm mt-2'>
+            <h2 className='text-xl font-bold text-white mb-2 leading-tight'>{data.taskTitle}</h2>
+            <p className='text-sm text-gray-400 h-[45%] overflow-hidden'>
                 {data.taskDescription}
             </p>
             <div className='mt-6'>
-                <button onClick={handleAcceptTask} className='bg-blue-500 rounded font-medium py-1 px-2 text-xs'>Accept Task</button>
+                <button onClick={handleAcceptTask} className='w-full bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium py-2 px-3 text-xs transition-colors shadow-lg shadow-blue-600/20'>Accept Task</button>
             </div>
         </div>
     )
