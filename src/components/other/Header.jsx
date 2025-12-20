@@ -21,21 +21,21 @@ const Header = (props) => {
   const { text: greeting, time: timeOfDay } = getGreetingData();
 
   return (
-    <div className='flex items-center justify-between bg-[#1c1c1c] pb-6 border-b border-gray-800 relative overflow-hidden'>
+    <div className='flex flex-col sm:flex-row items-start sm:items-center justify-between bg-[#1c1c1c] pb-4 sm:pb-6 border-b border-gray-800 relative overflow-hidden gap-4'>
       {/* Visual Decoration */}
       <GreetingDecoration timeOfDay={timeOfDay} />
 
       <div className='z-10'>
-        <h1 className='text-gray-400 text-lg font-medium animate-fadeInUp flex items-center gap-2'>
+        <h1 className='text-gray-400 text-base sm:text-lg font-medium animate-fadeInUp flex items-center gap-2'>
           {greeting},
         </h1>
-        <span className='text-3xl font-bold bg-gradient-to-r from-emerald-400 to-emerald-600 bg-clip-text text-transparent animate-fadeInUp delay-100 inline-block'>
+        <span className='text-2xl sm:text-3xl font-bold bg-gradient-to-r from-emerald-400 to-emerald-600 bg-clip-text text-transparent animate-fadeInUp delay-100 inline-block'>
           {props.data ? props.data.firstName : 'Admin'} 👋
         </span>
       </div>
       <button
         onClick={logOutUser}
-        className='z-10 bg-red-500 hover:bg-red-600 text-white font-medium px-6 py-2.5 rounded-lg transition-colors shadow-lg shadow-red-500/20'
+        className='z-10 bg-red-500 hover:bg-red-600 text-white font-medium px-4 sm:px-6 py-2 sm:py-2.5 rounded-lg transition-colors shadow-lg shadow-red-500/20 text-sm sm:text-base'
       >
         Log Out
       </button>

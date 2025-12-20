@@ -41,16 +41,16 @@ const CreateUser = () => {
     }
 
     return (
-        <div className='p-5 bg-[#1c1c1c] mt-5 rounded'>
-            <h2 className='text-xl font-medium mb-4'>Create New User</h2>
-            <form onSubmit={submitHandler} className='flex flex-wrap w-full items-start justify-between'>
-                <div className='w-1/2'>
+        <div className='p-4 sm:p-5 bg-[#1c1c1c] mt-4 sm:mt-5 rounded'>
+            <h2 className='text-lg sm:text-xl font-medium mb-3 sm:mb-4'>Create New User</h2>
+            <form onSubmit={submitHandler} className='flex flex-col lg:flex-row flex-wrap w-full items-start justify-between gap-4 lg:gap-0'>
+                <div className='w-full lg:w-1/2'>
                     <div>
                         <h3 className='text-sm text-gray-300 mb-0.5'>First Name</h3>
                         <input
                             value={firstName}
                             onChange={(e) => setFirstName(e.target.value)}
-                            className='text-sm py-1 px-2 w-4/5 rounded outline-none bg-transparent border-[1px] border-gray-400 mb-4'
+                            className='text-sm py-1 px-2 w-full lg:w-4/5 rounded outline-none bg-transparent border-[1px] border-gray-400 mb-4'
                             type="text"
                             placeholder='John'
                         />
@@ -60,20 +60,20 @@ const CreateUser = () => {
                         <input
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
-                            className='text-sm py-1 px-2 w-4/5 rounded outline-none bg-transparent border-[1px] border-gray-400 mb-4'
+                            className='text-sm py-1 px-2 w-full lg:w-4/5 rounded outline-none bg-transparent border-[1px] border-gray-400 mb-4'
                             type="email"
                             placeholder='john@example.com'
                         />
                     </div>
                 </div>
 
-                <div className='w-1/2'>
+                <div className='w-full lg:w-1/2'>
                     <div>
                         <h3 className='text-sm text-gray-300 mb-0.5'>Password</h3>
                         <input
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
-                            className='text-sm py-1 px-2 w-4/5 rounded outline-none bg-transparent border-[1px] border-gray-400 mb-4'
+                            className='text-sm py-1 px-2 w-full lg:w-4/5 rounded outline-none bg-transparent border-[1px] border-gray-400 mb-4'
                             type="password"
                             placeholder='••••••••'
                         />
@@ -83,7 +83,7 @@ const CreateUser = () => {
                         <select
                             value={role}
                             onChange={(e) => setRole(e.target.value)}
-                            className='text-sm py-1 px-2 w-4/5 rounded outline-none bg-transparent border-[1px] border-gray-400 mb-4'
+                            className='text-sm py-1 px-2 w-full lg:w-4/5 rounded outline-none bg-transparent border-[1px] border-gray-400 mb-4'
                         >
                             <option value='employee' className='bg-gray-800'>Employee</option>
                             <option value='admin' className='bg-gray-800'>Admin</option>
